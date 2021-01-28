@@ -19,11 +19,12 @@ var certificate = fs.readFileSync( certificatePath );
 var server = https.createServer({
     key: privateKey,
     cert: certificate
-}, app).listen(SSLPORT);
+}, app).listen(SSLPORT);	
 
 // var io  = require('socket.io').listen(server, { log: false });
-var io  = require('socket.io')(process.env.PORT || HTTPPORT, { log: false });
+var io  = require('socket.io')(process.env.PORT  || 80);
 
+app.listen(process.env.PORT);
 // Redirect from http to https
 // var http = require('http');
 // http.createServer(function (req, res) {
