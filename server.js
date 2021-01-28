@@ -23,7 +23,7 @@ app.use(express.static(__dirname + '/webcontent'));
 // }, app).listen(SSLPORT);	
 
 // var io  = require('socket.io').listen(server, { log: false });
-var io  = require('socket.io')(http);
+var io  = require('socket.io')(https);
 
 https.listen(process.env.PORT);
 
