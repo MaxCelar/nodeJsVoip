@@ -1,5 +1,5 @@
 /* CONFIG */
-var SSLPORT = 443; //Default 443
+var SSLPORT = 8080; //Default 443
 var HTTPPORT = 80; //Default 80 (Only used to redirect to SSL port)
 var privateKeyPath = "./cert/key.pem"; //Default "./cert/key.pem"
 var certificatePath = "./cert/cert.pem"; //Default "./cert/cert.pem"
