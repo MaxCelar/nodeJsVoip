@@ -13,13 +13,13 @@ var app = express();
 
 app.use(express.static(__dirname + '/webcontent'));
 
-var privateKey = fs.readFileSync( privateKeyPath );
-var certificate = fs.readFileSync( certificatePath );
+// var privateKey = fs.readFileSync( privateKeyPath );
+// var certificate = fs.readFileSync( certificatePath );
 
-var server = https.createServer({
-    key: privateKey,
-    cert: certificate
-}, app).listen(SSLPORT);	
+// var server = https.createServer({
+//     key: privateKey,
+//     cert: certificate
+// }, app).listen(SSLPORT);	
 
 // var io  = require('socket.io').listen(server, { log: false });
 var io  = require('socket.io')(process.env.PORT  || 80);
