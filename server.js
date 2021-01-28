@@ -8,9 +8,9 @@ var certificatePath = "./cert/cert.pem"; //Default "./cert/cert.pem"
 
 var fs = require('fs');
 var express = require('express');
-var https = require('https');
+// var https = require('https');
 var app = express();
-const http = require('http').Server(app);
+const https = require('https').Server(app);
 
 app.use(express.static(__dirname + '/webcontent'));
 
@@ -25,7 +25,7 @@ app.use(express.static(__dirname + '/webcontent'));
 // var io  = require('socket.io').listen(server, { log: false });
 var io  = require('socket.io')(http);
 
-htto.listen(process.env.PORT);
+https.listen(process.env.PORT);
 
 // app.listen(process.env.PORT);
 // Redirect from http to https
