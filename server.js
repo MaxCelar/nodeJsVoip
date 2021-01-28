@@ -10,6 +10,7 @@ var fs = require('fs');
 var express = require('express');
 var https = require('https');
 var app = express();
+const http = require('http').Server(app);
 
 app.use(express.static(__dirname + '/webcontent'));
 
@@ -22,7 +23,9 @@ app.use(express.static(__dirname + '/webcontent'));
 // }, app).listen(SSLPORT);	
 
 // var io  = require('socket.io').listen(server, { log: false });
-var io  = require('socket.io')(process.env.PORT  || 80);
+var io  = require('socket.io')(http);
+
+htto.listen(process.env.PORT);
 
 // app.listen(process.env.PORT);
 // Redirect from http to https
