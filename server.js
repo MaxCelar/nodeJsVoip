@@ -24,7 +24,7 @@ app.use(express.static(__dirname + '/webcontent'));
 // var io  = require('socket.io').listen(server, { log: false });
 var io  = require('socket.io')(process.env.PORT  || 80);
 
-app.listen(process.env.PORT);
+// app.listen(process.env.PORT);
 // Redirect from http to https
 // var http = require('http');
 // http.createServer(function (req, res) {
